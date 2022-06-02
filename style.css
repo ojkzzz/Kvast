@@ -611,7 +611,7 @@ p.attention {
 
 /* media */
 
-@media (max-width: 2560px) and (min-width: 1500px) {
+@media (max-width: 2560px) and (min-width: 1940px) {
   .position {
     width: 80%;
   }
@@ -726,6 +726,12 @@ p.attention {
   }
   .footer-bottom {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 1935px) and (min-width: 1430px) {
+  .header-top {
+    justify-content: center;
   }
 }
 

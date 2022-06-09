@@ -37,6 +37,10 @@ body {
   margin-right: 30px;
 }
 
+.links li:hover {
+  opacity: 0.7;
+}
+
 .links ul li:last-child {
   margin-right: 0;
 }
@@ -58,6 +62,9 @@ body {
 .header-hymn {
   padding-bottom: 100px;
   margin-top: 50px;
+}
+.burger {
+  display: none;
 }
 
 /* NEW */
@@ -175,6 +182,14 @@ body {
   background-color: #ffcb78;
 }
 
+.benefits .position-2 {
+  justify-content: space-around;
+}
+.benefits-item-1 p,
+.benefits-item-2 p {
+  padding-right: 40px;
+}
+
 .benefits li {
   list-style: none;
   margin-bottom: 100px;
@@ -211,7 +226,6 @@ body {
 }
 
 .position-2 {
-  width: 1015px;
   margin: 0 auto;
 }
 
@@ -345,10 +359,6 @@ body {
   left: -10%;
 }
 
-.review-feedback {
-  line-height: 25px;
-}
-
 /* assortment */
 
 .assortment {
@@ -377,7 +387,7 @@ table {
 }
 
 .assortment table {
-  width: 800px;
+  width: 100%;
   margin-bottom: 90px;
 }
 
@@ -424,6 +434,10 @@ table {
 .order textarea {
   background-color: #e6b66c;
 }
+.phone-number,
+.phone-number-2 {
+  width: 40%;
+}
 
 label {
   text-transform: uppercase;
@@ -441,7 +455,7 @@ label {
 
 .phone-number input,
 .phone-number-2 input {
-  width: 350px;
+  width: 100%;
 }
 
 .phone-numbers {
@@ -611,6 +625,176 @@ p.attention {
 
 /* media */
 
+@media (max-width: 4000px) and (min-width: 2560px) {
+  .header-logo img,
+  .footer-img {
+    width: 350px;
+  }
+  .links li a,
+  .footer-links li a {
+    font-size: 55px;
+  }
+  .header-hymn p {
+    font-size: 120px;
+  }
+  .new-to-buy.position h2 {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  .new-products h3 {
+    font-size: 60px;
+  }
+  .new-products {
+    border-left: none;
+    border-right: none;
+    justify-content: center;
+  }
+  .new-product-1 {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+  }
+  .new-product-2 {
+    border-right: 1px solid gray;
+  }
+  .new-to-buy.position img {
+    width: 500px;
+  }
+  .new-products td {
+    font-size: 40px;
+  }
+  .new-to-buy.position p {
+    font-size: 40px;
+  }
+
+  .components-new-product-1 {
+    right: -60px;
+    width: 310px;
+    top: 330px;
+  }
+  .components-new-product-2 {
+    right: -28px;
+    width: 310px;
+    top: 320px;
+  }
+  .new-to-buy a,
+  .new-to-buy b {
+    font-size: 40px;
+  }
+  .details,
+  .details-2 {
+    width: 275px;
+  }
+  .benefits {
+    padding: 150px 0;
+  }
+  .benefits p {
+    font-size: 40px;
+  }
+  .benefits h2 {
+    font-size: 60px;
+  }
+  .history h2 {
+    font-size: 60px;
+  }
+  p,
+  span {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  .history img {
+    width: 500px;
+    height: auto;
+  }
+
+  .history-story-1,
+  .history-story-2 {
+    width: 60%;
+  }
+  .review h2 {
+    font-size: 60px;
+  }
+  .review p {
+    font-size: 40px;
+  }
+  .review a {
+    height: fit-content;
+    margin: 40px;
+    font-size: 40px;
+    padding: 20px;
+  }
+  .review-img {
+    width: 100%;
+    height: 100%;
+  }
+  .assortment h2 {
+    font-size: 60px;
+  }
+  .assortment table {
+    width: 100%;
+  }
+  .assortment tr:not(:first-child) td:first-child {
+    font-size: 30px;
+  }
+  .assortment tbody td {
+    font-size: 30px;
+  }
+  .assortment tr:first-child td {
+    font-size: 20px;
+  }
+  .order h2 {
+    font-size: 60px;
+  }
+  .order-introduce {
+    line-height: normal;
+  }
+  .order-checkbox label,
+  .order .order-submit {
+    font-size: 25px;
+  }
+  .phone-number,
+  .phone-number-2 {
+    width: 40%;
+  }
+
+  .phone-number input,
+  .phone-number-2 input {
+    width: 100%;
+  }
+  .social-networks {
+    align-self: center;
+  }
+  .footer .social-networks a {
+    background-size: contain;
+    margin-left: 20px;
+  }
+  p.attention {
+    width: auto;
+  }
+
+  .footer-copyright a img {
+    width: 40px;
+  }
+  .footer-developer {
+    left: 100px;
+    font-size: 40px;
+  }
+  .footer-copyright {
+    align-self: center;
+  }
+}
+
+@media (max-width: 3300px) and (min-width: 2560px) {
+  .header-top {
+    justify-content: center;
+  }
+  .links li a,
+  .footer-links li a {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 2560px) and (min-width: 1940px) {
   .position {
     width: 80%;
@@ -725,11 +909,51 @@ p.attention {
     width: 100%;
   }
   .footer-bottom {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
-@media (max-width: 1935px) and (min-width: 1430px) {
+@media (max-width: 1940px) and (min-width: 1600px) {
+  .header-top {
+    justify-content: center;
+  }
+  .links li a {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1820px) and (min-width: 1600px) {
+  .links li a {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 1420px) {
+  .links li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1420px) {
+  .header-hymn p {
+    font-size: 100px;
+  }
+}
+@media (max-width: 1301px) and (min-width: 1155px) {
+  .new-to-buy b {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1185px) {
+  .header-hymn p {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1155px) and (min-width: 1024px) {
+  .position {
+    width: 80%;
+  }
   .header-top {
     justify-content: center;
   }
@@ -747,7 +971,7 @@ p.attention {
     width: 260px;
   }
   .new-to-buy b {
-    margin-left: 185px;
+    margin-left: 30px;
     line-height: 40px;
   }
   .details-2 {
@@ -755,35 +979,83 @@ p.attention {
   }
   .history-story-1,
   .history-story-2 {
-    width: 350px;
+    width: 40%;
   }
-  .phone-number input,
-  .phone-number-2 input {
-    width: 260px;
+  .footer-top,
+  .header-top {
+    justify-content: space-evenly;
   }
-  .footer-top {
-    justify-content: space-between;
+  .footer-links li:not(:first-child) {
+    margin-top: 10px;
   }
   .footer .position {
     width: 75%;
   }
+  .new-to-buy .new-products {
+    flex-direction: column;
+  }
+  .new-product-1 {
+    border-right: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+  }
+  .new-to-buy a {
+    text-decoration: none;
+    margin-bottom: 30px;
+  }
+  .benefits .position-2 {
+    flex-direction: column;
+    padding-bottom: 70px;
+  }
+  .position-2.position-2-flex ul {
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    width: 80%;
+  }
+  .position-2.position-2-flex ul li {
+    margin-bottom: 0;
+    border-right: none;
+  }
+
+  .benefits-item-3 {
+    border-bottom: none;
+  }
+  .benefits-img-1,
+  .benefits-img-2,
+  .benefits-img-3 {
+    margin: 40px auto;
+  }
+  .benefits h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .benefits p {
+    font-size: 20px;
+  }
+  .review .review-feedback {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .review-img {
+    left: 0;
+  }
 }
 
 @media (max-width: 987px) {
-  .header .position .header-top .links ul li {
+  .header .position .header-top .links ul li,
+  .footer-links li {
     display: block;
     margin-right: 0;
     text-align: center;
-  }
-  .header-top {
-    justify-content: space-around;
   }
 
   .header .position .header-top .links ul li:not(:first-child) {
     margin-top: 10px;
   }
 
-  .header .position .header-top .links ul {
+  .header .position .header-top .links ul,
+  .footer .footer-links ul {
     margin: 0;
   }
 
@@ -799,8 +1071,26 @@ p.attention {
   .footer .position {
     width: 90%;
   }
+  .footer-developer {
+    top: 15px;
+  }
+  .footer-copyright a img {
+    width: 15px;
+  }
+  .footer-copyright {
+    align-self: center;
+  }
+  .footer .social-networks a {
+    padding: 10px;
+  }
+  .social-networks {
+    align-self: center;
+  }
 }
 @media (max-width: 821px) {
+  .header-hymn {
+    margin-top: 100px;
+  }
   .assortment table {
     width: 100%;
   }
@@ -809,6 +1099,64 @@ p.attention {
   }
   .position-2 {
     width: auto;
+  }
+  .burger {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(250, 235, 215, 0.5);
+  }
+  .burger:hover,
+  .burger:active {
+    background-color: rgba(250, 235, 215, 0.3);
+  }
+
+  .burger::after,
+  .burger::before,
+  .burger span {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+  }
+  .burger span {
+    top: 50%;
+    left: 25%;
+  }
+  .burger::after {
+    top: 60%;
+    content: "";
+    left: 25%;
+  }
+  .burger::before {
+    top: 40%;
+    content: "";
+    left: 25%;
+  }
+  .header-top {
+    position: relative;
+    justify-content: space-between;
+  }
+  .links {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  .active {
+    display: block;
+    right: 0;
+    top: 70%;
+    background-color: rgba(250, 235, 215, 0.3);
+    border-radius: 20px;
+    opacity: 1;
+  }
+  .active ul {
+    border-top: none;
+    border-bottom: none;
   }
 }
 
@@ -851,16 +1199,9 @@ p.attention {
   .benefits .position-2 {
     width: auto;
   }
-  .history-story-1,
-  .history-story-2 {
-    width: 240px;
-  }
+
   .assortment table {
     width: 100%;
-  }
-  .phone-number input,
-  .phone-number-2 input {
-    width: 195px;
   }
   .footer .position {
     width: 95%;
@@ -875,6 +1216,18 @@ p.attention {
   .footer-developer {
     left: 65px;
   }
+  .footer-bottom {
+    flex-direction: column;
+  }
+  .social-networks {
+    align-self: center;
+  }
+  .attention {
+    align-self: center;
+  }
+  .footer-copyright {
+    align-self: flex-start;
+  }
 }
 
 @media (max-width: 592px) {
@@ -886,6 +1239,11 @@ p.attention {
   }
   .header-logo img {
     width: 100px;
+  }
+}
+@media (max-width: 593px) and (min-width: 541px) {
+  .active {
+    top: 90%;
   }
 }
 
@@ -916,6 +1274,35 @@ p.attention {
   }
   .footer-links li:not(:first-child) {
     margin-top: 10px;
+  }
+  .review-bottom {
+    flex-direction: column;
+  }
+  .review-text a {
+    margin: 0 auto;
+    width: fit-content;
+  }
+  .papper {
+    margin: 0 auto;
+    margin-bottom: 35px;
+    order: -1;
+  }
+  .review-img {
+    left: 0;
+    top: -35px;
+  }
+  .active {
+    right: 0;
+    top: 90%;
+  }
+}
+@media (max-width: 458px) {
+  .phone-numbers {
+    flex-direction: column;
+  }
+  .phone-number,
+  .phone-number-2 {
+    width: 100%;
   }
 }
 
@@ -1013,7 +1400,6 @@ p.attention {
   .benefits-img-1,
   .benefits-img-2,
   .benefits-img-3 {
-    margin-left: 150px;
     margin-bottom: 40px;
     margin-top: 40px;
   }
@@ -1031,7 +1417,6 @@ p.attention {
 
   .benefits p {
     margin: 0 auto;
-    width: 300px;
     text-align: center;
   }
   .from-top,
@@ -1050,6 +1435,10 @@ p.attention {
   .history-story-1 {
     margin-bottom: 10px;
   }
+  .history-story-1,
+  .history-story-2 {
+    width: auto;
+  }
   .history-img-1 {
     margin-bottom: 80px;
   }
@@ -1060,13 +1449,14 @@ p.attention {
   .history {
     margin-bottom: 70px;
   }
-  .review-img {
-    left: -60px;
-  }
   .review-text a {
     font-size: 12px;
     line-height: 12px;
     height: 15px;
+  }
+  .review-feeback {
+    margin: 0;
+    margin-left: auto;
   }
   .papper {
     font-size: 10px;
@@ -1077,16 +1467,9 @@ p.attention {
   .assortment.position {
     width: 90%;
   }
-  .phone-number input,
-  .phone-number-2 input {
-    width: 100px;
-  }
   .footer-links ul {
-    border-top: none;
-    border-bottom: none;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
-    width: 130px;
   }
   .footer-links li {
     margin-bottom: 5px;
@@ -1111,14 +1494,6 @@ p.attention {
   .details-2 {
     margin-top: 65px;
   }
-  .new-to-buy .new-products {
-    flex-direction: column;
-  }
-  .new-product-1 {
-    border-right: none;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
-  }
   .review-text a {
     padding: 3px 12px;
     font-size: 12px;
@@ -1133,12 +1508,21 @@ p.attention {
   .assortment.position {
     width: 93%;
   }
-  .phone-number input,
-  .phone-number-2 input {
-    width: 90px;
-  }
+
   .footer-bottom {
     width: 65%;
+  }
+  .details,
+  .details-2 {
+    display: block;
+  }
+  .buy,
+  .buy-2 {
+    display: inline-block;
+    width: auto;
+  }
+  .footer-developer {
+    position: initial;
   }
 }
 
@@ -1163,11 +1547,6 @@ p.attention {
   .new-to-buy b {
     margin-left: 0px;
   }
-  .benefits-img-1,
-  .benefits-img-2,
-  .benefits-img-3 {
-    margin-left: 130px;
-  }
   .review-text a {
     padding: 5px;
   }
@@ -1184,9 +1563,6 @@ p.attention {
   .phone-number input,
   .phone-number-2 input {
     width: 100%;
-  }
-  .phone-numbers {
-    flex-direction: column;
   }
   .footer-bottom {
     width: 90%;

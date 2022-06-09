@@ -1130,11 +1130,13 @@ p.attention {
     top: 60%;
     content: "";
     left: 25%;
+    transition: all 0.5s;
   }
   .burger::before {
     top: 40%;
     content: "";
     left: 25%;
+    transition: all 0.5s;
   }
   .header-top {
     position: relative;
@@ -1157,6 +1159,20 @@ p.attention {
   .active ul {
     border-top: none;
     border-bottom: none;
+  }
+  .burger.active::before {
+    content: "";
+    transform: rotate(-45deg);
+    top: 20px;
+  }
+  .burger.active::after {
+    content: "";
+    transform: rotate(45deg);
+    top: auto;
+    bottom: 17px;
+  }
+  .burger.active span {
+    transform: scale(0);
   }
 }
 

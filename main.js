@@ -4,6 +4,6 @@ jQuery(function ($) {
 
 $(document).ready(function () {
   $(".burger").click(function (event) {
-    $(".links").toggleClass("active");
+    $(".links,.burger").toggleClass("active");
   });
 });

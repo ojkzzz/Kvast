@@ -601,6 +601,10 @@ p.attention {
   width: 200px;
 }
 
+.footer-copyright a {
+  margin-right: 20px;
+}
+
 .footer-copyright a img {
   display: inline-block;
   padding: 15px;
@@ -633,6 +637,96 @@ p.attention {
   margin-right: 30px;
 }
 
+/* popup */
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.popup img {
+  width: 30%;
+}
+.popup td {
+  border: 3px solid black;
+  font-size: 30px;
+}
+.popup-content {
+  position: relative;
+  height: fit-content;
+  width: 40%;
+  background-color: white;
+  opacity: 1;
+  margin-top: 50px;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.popup-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.popup .new-product-1 h3 {
+  font-size: 50px;
+}
+
+.popup-content .new-product-1 {
+  margin-bottom: 0%;
+}
+
+.popup-body .new-product-1 table,
+.popup-content .new-product-1 .components-new-product-1 {
+  right: 10%;
+  width: 30%;
+  height: auto;
+  text-align: center;
+}
+.popup-content .new-product-1 .components-new-product-1 {
+  top: 30%;
+}
+.popup-content .new-product-1 .buy {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.popup .new-product-1 p,
+.popup-content .new-product-1 .buy,
+.popup .new-product-1 b {
+  font-size: 25px;
+}
+/**/
+
+@media (max-width: 4100px) and (min-width: 1031px) {
+}
 /* media */
 
 @media (max-width: 4000px) and (min-width: 2560px) {
@@ -786,6 +880,7 @@ p.attention {
   .footer-copyright a img {
     width: 40px;
   }
+
   .footer-developer {
     left: 100px;
     font-size: 40px;
@@ -794,6 +889,36 @@ p.attention {
     align-self: center;
     justify-content: start;
   }
+  /**/
+  .popup-close {
+    font-size: 100px;
+  }
+  .popup-body .new-product-1 {
+    padding: 100px 0 100px 35px;
+  }
+  .popup .new-product-1 h3 {
+    font-size: 60px;
+    margin: 0 0 100px;
+  }
+
+  .popup-body .new-product-1 table td {
+    font-size: 30px;
+    border: 5px solid black;
+    text-align: center;
+  }
+  .popup .new-product-1 .components-new-product-1 {
+    font-size: 30px;
+    width: 30%;
+    text-align: center;
+    top: 40%;
+    right: 10%;
+  }
+  .popup .new-product-1 p,
+  .popup-content .new-product-1 .buy,
+  .popup .new-product-1 b {
+    font-size: 30px;
+  }
+  /**/
 }
 
 @media (max-width: 3300px) and (min-width: 2560px) {
@@ -803,6 +928,15 @@ p.attention {
   .links li a,
   .footer-links li a {
     font-size: 35px;
+  }
+}
+
+@media (max-width: 2560px) {
+  .popup .new-product-1 table {
+    height: auto;
+  }
+  .popup .new-product-1 .components-new-product-1 {
+    top: 35%;
   }
 }
 
@@ -924,6 +1058,25 @@ p.attention {
   }
 }
 
+@media (max-width: 2000px) {
+  .popup .new-product-1 h3 {
+    font-size: 32px;
+  }
+  .popup td {
+    border: 3px solid black;
+    font-size: 16px;
+  }
+  .popup .new-product-1 .components-new-product-1 {
+    top: 25%;
+    font-size: 16px;
+  }
+  .popup .new-product-1 p,
+  .popup-content .new-product-1 .buy,
+  .popup .new-product-1 b {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 1940px) and (min-width: 1600px) {
   .header-top {
     justify-content: center;
@@ -941,6 +1094,16 @@ p.attention {
 @media (max-width: 1600px) and (min-width: 1420px) {
   .links li a {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .popup .new-product-1 .components-new-product-1 {
+    top: 38%;
+    width: 50%;
+  }
+  .popup-body .new-product-1 table {
+    width: 45%;
   }
 }
 
@@ -1104,9 +1267,10 @@ p.attention {
     margin-top: 100px;
   }
   .links {
-    display: none;
     position: absolute;
     opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s;
   }
   .assortment table {
     width: 100%;
@@ -1161,12 +1325,13 @@ p.attention {
   }
 
   .links.active {
-    display: block;
     right: 0;
     top: 70%;
     background-color: rgba(250, 235, 215, 0.3);
     border-radius: 20px;
+    visibility: visible;
     opacity: 1;
+    transition: opacity 2s;
   }
   .active ul {
     border-top: none;
@@ -1175,7 +1340,7 @@ p.attention {
   .burger.active::before {
     content: "";
     transform: rotate(-45deg);
-    top: 20px;
+    top: 21px;
   }
   .burger.active::after {
     content: "";
@@ -1185,6 +1350,9 @@ p.attention {
   }
   .burger.active span {
     transform: scale(0);
+  }
+  .popup .new-product-1 .components-new-product-1 {
+    display: none;
   }
 }
 
@@ -1268,10 +1436,21 @@ p.attention {
   .header-logo img {
     width: 100px;
   }
+  .popup .description-new-product-1 {
+    margin-top: 50px;
+  }
+  .popup td {
+    font-size: 16px;
+  }
+  .popup .new-product-1 .components-new-product-1 {
+    font-size: 16px;
+    top: 30%;
+  }
 }
-@media (max-width: 593px) and (min-width: 541px) {
-  .active {
-    top: 90%;
+@media (max-width: 593px) {
+  .links.active {
+    top: 70%;
+    right: 12%;
   }
 }
 
@@ -1498,6 +1677,15 @@ p.attention {
   .footer-links li {
     margin-bottom: 5px;
   }
+  .popup td {
+    border: 1px solid black;
+  }
+  .popup img {
+    width: 45%;
+  }
+  .popup .new-product-1 b {
+    padding: 5px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -1593,54 +1781,17 @@ p.attention {
   .footer-bottom {
     width: 90%;
   }
+  .popup .new-product-1 .components-new-product-1 {
+    top: 35%;
+  }
+  .popup .new-product-1 p,
+  .popup-content .new-product-1 .buy,
+  .popup .new-product-1 b {
+    font-size: 16px;
+  }
 }
-/* popup */
-
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 1s;
-}
-
-.popup:target {
-  opacity: 1;
-  visibility: visible;
-}
-
-.popup-body {
-  display: flex;
-  justify-content: center;
-}
-.popup img {
-  width: 100%;
-}
-.popup td {
-  border: 1px solid black;
-}
-.popup-content {
-  position: relative;
-  max-width: 400px;
-  background-color: white;
-  opacity: 1;
-}
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.popup-area {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+@media (max-width: 260px) {
+  .popup .new-product-1 .components-new-product-1 {
+    top: 40%;
+  }
 }

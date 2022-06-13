@@ -1507,6 +1507,12 @@ p.attention {
   .phone-number-2 {
     width: 100%;
   }
+  .footer-copyright {
+    justify-content: end;
+  }
+  .popup-content {
+    width: 70%;
+  }
 }
 
 @media (max-width: 426px) {
